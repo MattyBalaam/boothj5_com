@@ -381,7 +381,7 @@ img, a img {
   display: inline-block;
 }
 
-img:hover {
+/*img:hover {
   -moz-transform: scale(1.5, 1.5);
   -webkit-transform: scale(1.5, 1.5);
   -o-transform: scale(1.5, 1.5);
@@ -396,7 +396,7 @@ img:hover {
   -o-transform-origin: 50% 50%;
   -ms-transform-origin: 50% 50%;
   transform-origin: 50% 50%;
-}
+}*/
 
 p {
   margin-bottom: 10px;
@@ -434,4 +434,204 @@ p {
   padding-top: 70px;
   }
 
+}
+
+
+/*Slider stuff:*/
+
+
+.slide-holder {
+  margin-top: 60px;
+  position: relative;
+  width: 100%; 
+}
+
+.slide-holder p.download-instructions{
+  position: absolute;
+  top: 70px;
+  left: 0px;
+  width: 69%;
+  padding: 5px 3%;
+  display:block
+  background: white;
+  opacity: 0.5;
+  -moz-transition: all 1s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.slide-holder:hover p.download-instructions{
+  border-right: 2px solid white;
+  display:block;
+  background: white;
+  z-index: 9999;
+}
+
+.slide-holder h4{
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #050;
+  color: #ddd;
+  margin: 0;
+  width: 100%;
+  display: block;
+  padding: 30px 3%;
+  height: 100px;
+}
+
+.slide-holder img{
+  max-width:100%;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+}
+
+.pika-thumbs {
+  width: 25%;
+  position: absolute;
+  right: 0px;
+  top: 100px;
+}
+.pika-thumbs li {
+  width: 50%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box; 
+  border-top: 1px solid white;
+  border-left: 1px solid white;
+  float: left;
+  list-style-type: none;
+  cursor:pointer;
+}
+
+.pika-thumbs img {
+  max-width:100%;
+vertical-align: bottom;
+}
+.pika-stage,.pika-textnav {
+  width:75%;
+}
+.pika-stage {
+  position: relative;
+  display:inline-block;
+  border-top:1px solid #e5e5e5;
+  padding:0px 0px 60px;
+}
+
+.pika-stage img {
+  width:100%;
+  height:100%;
+}
+.pika-stage .caption {
+  position:absolute;
+  background:rgba(0,0,0,0.75);
+  border:1px solid #141414;
+  font-size:35px;
+  color:#fafafa;
+  top:0px;
+  right:0px;
+  padding:20px 60px 20px 10px;
+}
+.pika-stage .caption p {
+  line-height:14px;
+  margin:0;
+  padding:0;
+}
+
+.pika-textnav {
+  overflow:hidden;
+  bottom:10px;
+  position:absolute;
+  margin:10px 0 0;
+width: 100%;
+}
+
+.pika-textnav a {
+  font-size:15px;
+  text-decoration:none;
+  color:#aaa;
+  padding:10px;
+  background: black;
+  height: 20px;
+  width:auto;
+min-width: 70px;
+  display:block;
+  position: relative;
+}
+
+.pika-textnav a:hover {
+  color:#fff;
+  padding:10px;
+  background: black;
+  height: 20px;
+}
+
+.pika-textnav a.previous {
+  float:left;
+  margin-left: 30px;
+  text-align: right;
+}
+
+.pika-textnav a.previous:after {
+  content: "";
+  display: table;
+  position: absolute;
+  top: 0%;
+  left: -40px;
+  border: 20px solid transparent;
+  border-right: 20px solid black;
+}
+.pika-textnav a.next {
+  float:right;
+  margin-right: 30px;
+}
+
+.pika-textnav a.next:after {
+  content: "";
+  display: table;
+  position: absolute;
+  top: 0%;
+  right: -40px;
+  border: 20px solid transparent;
+  border-left: 20px solid black;
+}
+
+.pika-tooltip {
+  font-size:12px;
+  position:absolute;
+  color:#FFF;
+  background-color:rgba(0,0,0,0.7);
+  border:3px solid #000;
+  padding:3px;
+}
+
+.pika-counter {
+  position:absolute;
+  z-index: 10;
+  top:10px;
+  right:10px;
+  color:#FFF;
+  background:rgba(100,100,0,0.7);
+  font-size:20px;
+  -moz-border-radius:30px;
+  border-radius:30px;
+  padding:10px;
+}
+
+.pika-loader {
+  background:url(loading.gif) 3px 3px no-repeat #000;
+  background-color:rgba(0,0,0,0.9);
+  color:#FFF;
+  width:60px;
+  font-size:11px;
+  text-align:right;
+  position:absolute;
+  top:15px;
+  right:15px;
+  padding:5px 3px;
 }
